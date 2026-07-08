@@ -41,4 +41,17 @@ def p3():
     print()
 
 
-p3()
+# p3()
+
+# 1
+# 12
+# 123
+# 1234
+# 12345
+def p4():
+  for i in range(1,6):
+    for j in range(1,i+1):
+      print(j,end='')
+    print()
+
+p4()
