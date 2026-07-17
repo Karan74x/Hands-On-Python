@@ -56,4 +56,11 @@ sheet = [
   {"Name": "Harsh", "Age":20}
 ]
 
-print(pd.DataFrame(sheet))
+# print(pd.DataFrame(sheet))
+
+# Accessing DataFrame
+df = pd.DataFrame(sheet)
+print(df["Name"])
+print(df["Age"])
+print(df[["Name","Age"]])
+print(df[["Age", "Name"]])
