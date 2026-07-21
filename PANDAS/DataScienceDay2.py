@@ -37,4 +37,9 @@ import pandas as pd
 # df = pd.read_csv(r"D:/students.csv",header=None)
 
 
+
+
+#                     Force a datatype. dtype={"column name":data type}
+# df = pd.read_csv(r"D:/students.csv", dtype={"Marks":float})
+df = pd.read_csv(r"D:/students.csv", dtype={"ID":float})
 print(df)
