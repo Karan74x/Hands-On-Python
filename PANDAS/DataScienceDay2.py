@@ -83,6 +83,31 @@ df = pd.read_csv(r"D:/students.csv")
 
 # .describe() calculates summary statistics.
 # By default, it runs on numeric columns, but it also works on text columns (using include='all').
-print(df.describe())
-print("\n\n\t\tAfter including all columns\n\n")
-print(df.describe(include='all'))
+# print(df.describe())
+# print("\n\n\t\tAfter including all columns\n\n")
+# print(df.describe(include='all'))
+
+
+#              loc[]  → Location by NAME
+# Give me the row whose index is 0 .
+# print(df.loc[0])
+
+# Give me the row whose index is  3
+# print(df.loc[3])
+# print(df)
+
+#     Select One Value ->  loc[row index, "column name"]
+# print(df.loc[2, "Name"])
+
+
+# Select Multiple Columns -> loc[ :, ["Name", "Marks"]]
+#                               ( : -> means All rows)
+# print(df.loc[:, ["Name", "Marks"]])
+
+
+# Select Multiple Rows -> loc[1:3] (1: 3 (includes 3rd index also))
+# print(df.loc[1:3])
+
+# print(df.loc[:4, ["Name", "Marks"]])
+
+
