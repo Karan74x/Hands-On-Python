@@ -43,12 +43,48 @@ import pandas as pd
 # df = pd.read_csv(r"D:/students.csv", dtype={"Marks":float})
 # df = pd.read_csv(r"D:/students.csv", dtype={"ID":float})
 
+
 #                     SELECTING COLUMNS
 df = pd.read_csv(r"D:/students.csv")
 
 # One column -> Type Series
-print(df["Age"])
+# print(df["Age"])
 
 # Multiple columns -> Type DataFrame
-print(df[["Name", "City"]])
+# print(df[["Name", "City"]])
 # print(df)
+
+#              METHODS
+
+#             value_counts()
+
+# print(df["City"].value_counts())
+# print(df["Course"].value_counts())
+
+
+#             unique() -> Returns all unique values.(In an Array)
+# print(df["City"].unique())
+# print(df["Course"].unique())
+
+
+#           nunique()-> Returns only the unique values count.
+# print(df["City"].nunique())
+# print(df["Age"].nunique())
+
+
+#          shape -> (rows,columns)
+# print(df.shape)
+
+#         columns -> return all columns names (Array)
+# print(df.columns)
+
+# Shows number of rows, datatype, missing values, memory usage
+# print(df.info())
+
+# .describe() calculates summary statistics.
+# By default, it runs on numeric columns, but it also works on text columns (using include='all').
+# .describe() calculates summary statistics.
+# By default, it runs on numeric columns, but it also works on text columns (using include='all').
+print(df.describe())
+print("\n\n\t\tAfter including all columns\n\n")
+print(df.describe(include='all'))
