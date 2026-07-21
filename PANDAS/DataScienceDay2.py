@@ -83,8 +83,6 @@ df = pd.read_csv(r"D:/students.csv")
 
 # .describe() calculates summary statistics.
 # By default, it runs on numeric columns, but it also works on text columns (using include='all').
-# .describe() calculates summary statistics.
-# By default, it runs on numeric columns, but it also works on text columns (using include='all').
 print(df.describe())
 print("\n\n\t\tAfter including all columns\n\n")
 print(df.describe(include='all'))
