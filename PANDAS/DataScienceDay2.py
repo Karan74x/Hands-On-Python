@@ -41,5 +41,14 @@ import pandas as pd
 
 #                     Force a datatype. dtype={"column name":data type}
 # df = pd.read_csv(r"D:/students.csv", dtype={"Marks":float})
-df = pd.read_csv(r"D:/students.csv", dtype={"ID":float})
-print(df)
+# df = pd.read_csv(r"D:/students.csv", dtype={"ID":float})
+
+#                     SELECTING COLUMNS
+df = pd.read_csv(r"D:/students.csv")
+
+# One column -> Type Series
+print(df["Age"])
+
+# Multiple columns -> Type DataFrame
+print(df[["Name", "City"]])
+# print(df)
