@@ -111,3 +111,17 @@ df = pd.read_csv(r"D:/students.csv")
 # print(df.loc[:4, ["Name", "Marks"]])
 
 
+#     iloc[row_index, column_index] -> Location by Integer Location(index).
+
+# row at position 2
+# print(df.iloc[2])
+
+# row at position 4.
+# print(df.iloc[4])
+
+#  : -> all rows, 5 -> 5th index column
+# print(df.iloc[:, 5])
+
+#      in iloc slicing works normally( normal python slicing)
+# print(df.iloc[1:3, 0:3])
+
