@@ -11,7 +11,19 @@ df = pd.read_csv(r"D:/students.csv")
 
 # print(df)
 # Remove rows that contain at least one NaN.
-print(df.dropna()) # <- automatically axis=0 for rows
+
+# print(df.dropna()) # <- automatically axis=0 for rows
+
 
 # Remove columns that contain at least one NaN.
-print(df.dropna(axis=1))
+
+# print(df.dropna(axis=1))
+
+print(df)
+
+#                             fillna()
+#                  Instead of deleting data, replace NaN with a value.
+print(df.fillna(0)) # ->Every NaN becomes 0.
+print(df.fillna("empty"))  # -> Every NaN becomes "empty".
+df["Marks"] = df["Marks"].fillna('x0')
+print(df)
