@@ -32,8 +32,16 @@ df = pd.read_csv(r"D:/students.csv")
 #                 isin()
 #  checks whether each value in a column is present in a given list of values.
 
-print(df[df["City"].isin(["Ahmedabad", "Surat"])])
+# print(df[df["City"].isin(["Ahmedabad", "Surat"])])
 
-print(df[df["Name"].isin(["Karan", "Anas"])])
+# print(df[df["Name"].isin(["Karan", "Anas"])])
 
-print(df[df["Marks"].isin([99,91])])
+# print(df[df["Marks"].isin([99,91])])
+
+
+#           between()
+# checks whether each value lies between two values (inclusive by default).
+
+print(df[df["Marks"].between(80,90)])
+print(df[df["Age"].between(20,22)])
+print(df[df["ID"].between(2,4)])
