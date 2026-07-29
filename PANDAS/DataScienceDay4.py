@@ -42,6 +42,16 @@ df = pd.read_csv(r"D:/students.csv")
 #           between()
 # checks whether each value lies between two values (inclusive by default).
 
-print(df[df["Marks"].between(80,90)])
-print(df[df["Age"].between(20,22)])
-print(df[df["ID"].between(2,4)])
+# print(df[df["Marks"].between(80,90)])
+# print(df[df["Age"].between(20,22)])
+# print(df[df["ID"].between(2,4)])
+
+
+#                   query()
+#   filters rows using a condition written as a string.
+
+print(df.query("Marks > 80"))
+
+print(df.query("City == 'Ahmedabad'"))
+
+print(df.query("Marks > 80 and Age > 28"))
