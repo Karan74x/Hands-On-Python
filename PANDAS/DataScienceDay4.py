@@ -23,7 +23,17 @@ df = pd.read_csv(r"D:/students.csv")
 
 
 # Show students from Rajkot OR students having Marks > 90.
-print(df[(df["City"] == "Rajkot") | (df["Marks"] > 90)])
+# print(df[(df["City"] == "Rajkot") | (df["Marks"] > 90)])
 
 # Show students where age == 20 OR age == 22
-print(df[(df["Age"] == 20) | (df["Age"]==22)])
+# print(df[(df["Age"] == 20) | (df["Age"]==22)])
+
+
+#                 isin()
+#  checks whether each value in a column is present in a given list of values.
+
+print(df[df["City"].isin(["Ahmedabad", "Surat"])])
+
+print(df[df["Name"].isin(["Karan", "Anas"])])
+
+print(df[df["Marks"].isin([99,91])])
