@@ -13,11 +13,26 @@ df = pd.read_csv(r"D:/students.csv")
 #              Sorting by ONE Column
 
 #Sort everyone by their Marks, from smallest to biggest.
-print(df.sort_values(by="Marks"))
+# print(df.sort_values(by="Marks"))
 
 #Sort everyone by their Name, from smallest to biggest.
-print(df.sort_values(by="Name"))
+# print(df.sort_values(by="Name"))
 
 #Sort everyone by their Age, from biggest to lowest.
-print(df.sort_values(by="Age",ascending=False))
+# print(df.sort_values(by="Age",ascending=False))
 
+
+#               Sorting by MULTIPLE Columns
+# Rule 1 (First Priority): Sort by City alphabetically (A to Z).
+# Rule 2 : If two people live in the same city, sort them by Marks (lowest to highest).
+
+# Sort by City A-Z first. If cities match, lowest mark comes first
+print(df.sort_values(by=["City","Marks"]))
+
+# Sort by City A-Z first. If cities match, highest mark comes first becasue of ascending is set to False
+print(df.sort_values(by=["City", "Marks"], ascending=[True,False]))
+
+
+print(df.sort_values(by=["Age","City"]))
+
+print(df.sort_values(by=["Age","City"], ascending=[True,False]))
