@@ -43,9 +43,21 @@ df = pd.read_csv(r"D:/students.csv")
 #axis=1 or 'columns': Sorts Column Names / Headers left-to-right.
 
 # Sort rows vertically using the values inside "Marks"
-print(df.sort_values(by="Marks",axis=0))
+# print(df.sort_values(by="Marks",axis=0))
 
 
 # Sort column names alphabetically: City $\rightarrow$ Marks $\rightarrow$ Name.
-print(df.sort_values(axis=1))
+# print(df.sort_values(axis=1))
 
+
+
+#                   inplace (False vs True)
+# Controls whether to overwrite the existing DataFrame or return a brand-new copy.
+
+# Leaves original df untouched and returns a new sorted DataFrame.
+print(df.sort_values(by="Marks", inplace=False))
+print(df)
+
+# Overwrites df directly in memory and returns None.
+print(df.sort_values(by="City", inplace=True))
+print(df)
