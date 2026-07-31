@@ -55,9 +55,16 @@ df = pd.read_csv(r"D:/students.csv")
 # Controls whether to overwrite the existing DataFrame or return a brand-new copy.
 
 # Leaves original df untouched and returns a new sorted DataFrame.
-print(df.sort_values(by="Marks", inplace=False))
-print(df)
+# print(df.sort_values(by="Marks", inplace=False))
+# print(df)
 
 # Overwrites df directly in memory and returns None.
-print(df.sort_values(by="City", inplace=True))
-print(df)
+# print(df.sort_values(by="City", inplace=True))
+# print(df)
+
+
+#          na_position ("last" vs "first")
+#    Determines where missing data (NaN / None) goes.
+
+print(df.sort_values(by="Marks",na_position="last"))
+print(df.sort_values(by="Marks", na_position="first", ignore_index=True))
