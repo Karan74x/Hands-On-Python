@@ -27,12 +27,25 @@ df = pd.read_csv(r"D:/students.csv")
 # Rule 2 : If two people live in the same city, sort them by Marks (lowest to highest).
 
 # Sort by City A-Z first. If cities match, lowest mark comes first
-print(df.sort_values(by=["City","Marks"]))
+# print(df.sort_values(by=["City","Marks"]))
 
 # Sort by City A-Z first. If cities match, highest mark comes first becasue of ascending is set to False
-print(df.sort_values(by=["City", "Marks"], ascending=[True,False]))
+#print(df.sort_values(by=["City", "Marks"], ascending=[True,False]))
 
 
-print(df.sort_values(by=["Age","City"]))
+#print(df.sort_values(by=["Age","City"]))
 
-print(df.sort_values(by=["Age","City"], ascending=[True,False]))
+#print(df.sort_values(by=["Age","City"], ascending=[True,False]))
+
+
+#               axis (0 vs 1)
+# axis=0 or 'index' (Default): Sorts Rows up-and-down based on column values.
+#axis=1 or 'columns': Sorts Column Names / Headers left-to-right.
+
+# Sort rows vertically using the values inside "Marks"
+print(df.sort_values(by="Marks",axis=0))
+
+
+# Sort column names alphabetically: City $\rightarrow$ Marks $\rightarrow$ Name.
+print(df.sort_values(axis=1))
+
