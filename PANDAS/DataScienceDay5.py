@@ -66,5 +66,18 @@ df = pd.read_csv(r"D:/students.csv")
 #          na_position ("last" vs "first")
 #    Determines where missing data (NaN / None) goes.
 
-print(df.sort_values(by="Marks",na_position="last"))
-print(df.sort_values(by="Marks", na_position="first", ignore_index=True))
+# print(df.sort_values(by="Marks",na_position="last"))
+# print(df.sort_values(by="Marks", na_position="first", ignore_index=True))
+
+
+#                         key()
+# The key argument tells Pandas what values to use for comparison while sorting
+
+# sort by length of the Name
+print(df.sort_values(by="Name",key=lambda x: x.str.len()))
+
+# sort by lowercase() of the city
+print(df.sort_values(by="City", key=lambda x:x.str.lower()))
+
+# sort by last digit of Age
+print(df.sort_values(by="Age", key=lambda x:x%10))
