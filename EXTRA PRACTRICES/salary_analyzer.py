@@ -1,13 +1,15 @@
 def department_summary(employees):
-    if employees == []:
+
+    if employees == []:                         # Return empty dictionary if no employees
         return {}
 
-    data = {}
+    data = {}                                   # Stores department wise details
 
     for emp in employees:
+
         dept = emp["department"]
 
-        if dept not in data:
+        if dept not in data:                    # If department is new, create it
             data[dept] = {
                 "count": 0,
                 "total": 0,
@@ -24,7 +26,8 @@ def department_summary(employees):
 
     result = {}
 
-    for dept in sorted(data):
+    for dept in sorted(data):                   # departments in alphabetical order
+
         count = data[dept]["count"]
         average = round(data[dept]["total"] / count, 2)
         top_name = data[dept]["top"]
