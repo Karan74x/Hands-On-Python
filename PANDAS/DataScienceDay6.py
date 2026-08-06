@@ -29,7 +29,7 @@ students = pd.read_csv(r"../CSV FILES/students.csv")
 
 #                 mean()
 
-Calculate average Marks for each City group
+# Calculate average Marks for each City group
 print(students.groupby("City")["Marks"].mean())
 
 
