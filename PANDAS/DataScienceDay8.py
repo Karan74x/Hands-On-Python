@@ -20,5 +20,9 @@ fees = fees.set_index("StudentID")
 #  Keep all rows from fees.
 # print(students.join(fees, how="right"))
 
-# inner()->Keep only IDs that exist in both tables.
+# how ="inner" ->Keep only IDs that exist in both tables.
 print(students.join(fees, how="inner"))
+
+
+# how="outer" -> Keep ALL rows from both DataFrames.
+print(students.join(fees, how="outer"))``
