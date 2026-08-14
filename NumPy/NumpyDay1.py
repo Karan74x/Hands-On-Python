@@ -31,12 +31,29 @@ import numpy as np
 
 #                           3D array
 arr = np.array([
-              [['A','B','C'], ['D','E','F']],
-              [['G','H','i'], ['J','K','L']],
-              [['M','N','O'], ['P','Q','R']]
-              ]) # -> 3D array
+                [
+                  ['A','B','C'],
+                  ['D','E','F']
+                ],
+                [
+                  ['G','H','i'],
+                  ['J','K','L']
+                ],
+                [
+                  ['M','N','O'],
+                  ['P','Q','R']
+                ]
+              ])
 
 # Accessing elements in 3D array
 print(arr[2])
 print(arr[1][0][2])
 print(arr[0][1][1])
+
+#Another way to access elements
+print(arr[2,1,2])
+
+word = arr[2,0,0] + arr[0,0,0] + arr[2,0,1]
+print(word)
+# Layer,rows,columns (3,2,3)
+print(arr.shape)
