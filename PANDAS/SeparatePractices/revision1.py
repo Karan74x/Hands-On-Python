@@ -16,3 +16,31 @@ print(df)
 # Age converted to numeric form
 df["Marks"] = pd.to_numeric(df["Marks"], errors="coerce")
 print(df)
+
+
+
+# pd.to_datetime(column, error='coerce', dayfirst=True) -> converts values into datetime format
+# NaT -> Not a Time / invalid date
+
+df2 = pd.DataFrame({
+    "Appointment_Date": [
+        "12-08-2026",
+        "2026-08-15",
+        "20/08/2026",
+        "bad date",
+        "25-08-2026"
+    ],
+     "Order_Time": [
+        "12-08-2026",
+        "2026/08/15",
+        "20/08/2026",
+        "bad date",
+        "25-08-2026"
+    ]
+})
+
+# Converted invalid date to proper format
+df2["Appointment_Date"] = pd.to_datetime(df2["Appointment_Date"], errors="coerce", dayfirst=True)
+
+df2["Order_Time"] = pd.to_datetime(df2["Order_Time"], errors="coerce", dayfirst=True)
+print(df2)
