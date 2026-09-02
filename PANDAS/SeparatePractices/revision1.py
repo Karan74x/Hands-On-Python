@@ -1,5 +1,9 @@
 import pandas as pd
 
+
+#              1.   Data Cleaning & Conversion
+
+
 df = pd.DataFrame({
     "Age": ["21", "22", "twenty three", "25", "unknown"],
     "Marks": ["85", "90", "Absent", "78", "95"]
@@ -78,3 +82,14 @@ df3["Product"] = df3["Product"].str.strip()
 
 print(df3["Product"].str.replace("Mouse", "Speaker"))
 print(df3["Product"].str.replace("Chair", "Computer"))
+
+
+
+df4 = pd.DataFrame({
+  "Age":[
+    23,56,"45", "76", "98", "74","999"
+  ]
+})
+
+# df["Age"].astype() -> Used to change the data type of a column.
+print(df4["Age"].astype(int))
