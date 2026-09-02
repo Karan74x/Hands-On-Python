@@ -78,7 +78,7 @@ df3["Product"] = df3["Product"].str.strip()
 #    print(repr(product))
 
 
-# df["column"].str.replace(df["Column"]) -> replace specific text inside a column
+# df["column"].str.replace("old_Value", "new_Value") -> replace specific text inside a column
 
 print(df3["Product"].str.replace("Mouse", "Speaker"))
 print(df3["Product"].str.replace("Chair", "Computer"))
@@ -91,5 +91,5 @@ df4 = pd.DataFrame({
   ]
 })
 
-# df["Age"].astype() -> Used to change the data type of a column.
+# df["column"].astype(int) -> Used to change the data type of a column to int.
 print(df4["Age"].astype(int))
