@@ -11,11 +11,12 @@ df = pd.DataFrame({
 
 # Age converted to numeric form
 df["Age"] = pd.to_numeric(df["Age"], errors="coerce")
-print(df)
+# print(df)
 
 # Age converted to numeric form
 df["Marks"] = pd.to_numeric(df["Marks"], errors="coerce")
-print(df)
+# print(df)
+
 
 
 
@@ -43,4 +44,37 @@ df2 = pd.DataFrame({
 df2["Appointment_Date"] = pd.to_datetime(df2["Appointment_Date"], errors="coerce", dayfirst=True)
 
 df2["Order_Time"] = pd.to_datetime(df2["Order_Time"], errors="coerce", dayfirst=True)
-print(df2)
+# print(df2)
+
+
+
+#      Method	                      What it does
+
+#    .str.strip()     	Removes spaces from beginning/end
+#   .str.replace()          	Replaces text
+
+
+
+# df["column"].str.strip() -> remove spaces from start and end
+
+
+df3 = pd.DataFrame({
+   "Product": [
+        " Laptop Stand ",
+        "Wireless Mouse",
+        " Office Chair ",
+        "Notebook Pack  ",
+        "  USB Hub"
+    ]
+})
+
+df3["Product"] = df3["Product"].str.strip()
+
+# for product in df3["Product"]:
+#    print(repr(product))
+
+
+# df["column"].str.replace(df["Column"]) -> replace specific text inside a column
+
+print(df3["Product"].str.replace("Mouse", "Speaker"))
+print(df3["Product"].str.replace("Chair", "Computer"))
