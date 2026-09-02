@@ -22,9 +22,18 @@ print(df["Age"].isna())
 
 
 
-#        df["Column"].fillna() <- value to display, EX: 0/"unknown"
+#               df["Column"].fillna()
+#         .fillna() <- value to display, EX: 0/"unknown"
 
-df["Name"] = df["Name"].fillna("missing")
-df["Age"] = df["Age"].fillna(0)
-print(df)
+# df["Name"] = df["Name"].fillna("missing")
+# df["Age"] = df["Age"].fillna(0)
+# print(df)
 
+#                          df.dropna()
+#  is used to remove rows or columns that contain missing (NaN) values.
+#         use dropna(axis = 1) <- to remove columns
+
+print("\tbefore dropna()\n", df)
+
+df = df.dropna()
+print("\tafter dropna()\n",df)
