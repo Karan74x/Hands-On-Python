@@ -20,3 +20,11 @@ df = pd.DataFrame({
 print(df["Name"].isna())
 print(df["Age"].isna())
 
+
+
+#        df["Column"].fillna() <- value to display, EX: 0/"unknown"
+
+df["Name"] = df["Name"].fillna("missing")
+df["Age"] = df["Age"].fillna(0)
+print(df)
+
