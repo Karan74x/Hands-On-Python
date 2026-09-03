@@ -23,7 +23,7 @@ print(df["Age"].isna())
 
 
 #               df["Column"].fillna()
-#         .fillna() <- value to display, EX: 0/"unknown"
+#         .fillna() <- replaces missing value with specified value EX: 0/"unknown"
 
 # df["Name"] = df["Name"].fillna("missing")
 # df["Age"] = df["Age"].fillna(0)

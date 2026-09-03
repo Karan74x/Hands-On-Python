@@ -92,4 +92,5 @@ df4 = pd.DataFrame({
 })
 
 # df["column"].astype(int) -> Used to change the data type of a column to int.
+# if values are messy use pd.to_numeric(df["Column"], errors='coerce')
 print(df4["Age"].astype(int))
